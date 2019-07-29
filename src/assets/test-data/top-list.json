@@ -1,0 +1,8 @@
+[
+    {"name":"发现音乐","path":"discover"},
+    {"name":"我的音乐","path":"my-music"},
+    {"name":"朋友","path":"friend"},
+    {"name":"商城","path":"shop"},
+    {"name":"音乐人","path":"createor"},
+    {"name":"下载客户端","path":"download"}
+]
