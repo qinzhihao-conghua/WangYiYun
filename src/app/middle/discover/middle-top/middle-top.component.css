@@ -5,19 +5,64 @@
 }
 
 .middle-center {
-  width: 68%;
+  width: 984px;
   height: 100%;
   margin: 0 auto;
+  position: relative;
 }
 
 .middle-center-left {
-  width: 80%;
+  width: 730px;
   height: 100%;
-  float: left;
+  display: inline-block;
+  position: relative;
+}
+.middle-center-left>a{
+  height: 100%;
+  display: inline-block;
+}
+.scroll-left,.scroll-right{
+  display: inline-block;
+  width: 37px;
+  height: 63px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.scroll-left:hover,.scroll-right:hover{
+  background-color: black;
+  opacity: .3;
+}
+.scroll-left{
+  left: 215px;
+  background: url("../../../../assets/images/banner.png") no-repeat;
+  background-position: -2px -359px;
+}
+.scroll-right{
+  right: 215px;
+  background: url("../../../../assets/images/banner.png") no-repeat;
+  background-position: 0 -506px;
+}
+.dots{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+}
+.dots>a{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../../../../assets/images/banner.png") no-repeat;
+  background-position: 4px -343px;
+}
+.dots>a:hover{
+  background-position: -15px -343px;
 }
 
 .middle-right {
-  width: 20%;
+  width: 254px;
   height: 100%;
-  float: right;
+  display: inline-block;
+  background: url("../../../../assets/images/download.png") no-repeat;
 }

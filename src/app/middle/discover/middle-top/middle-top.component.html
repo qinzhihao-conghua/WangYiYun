@@ -1,10 +1,17 @@
-<div class="middle-top">
+<div class="middle-top" [ngStyle]="{'background': imageBgc}">
   <div class="middle-center">
     <div class="middle-center-left">
       <a href="javascript:void(0)">
-        <img src="../../../../assets/images/1.jpg" alt="">
+        <img [src]=imageSrc alt="">
       </a>
+      <div class="dots">
+        <a href="javascript:void(0)" *ngFor="let item of images, let i=index" (click)="locationImage(i)" ></a>
+      </div>
     </div>
-    <div class="middle-right"></div>
+    <div class="middle-right">
+      <a href="javascript:void(0)"></a>
+    </div>
   </div>
+  <a href="#" class="scroll-left"></a> 
+  <a href="#" class="scroll-right"></a>
 </div>
