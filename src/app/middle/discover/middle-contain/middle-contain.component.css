@@ -1,0 +1,17 @@
+.middle-contain{
+    width: 100%;
+    background-color: #f2f2f2;
+}
+.contain-center{
+    width: 982px;
+    margin: 0 auto;
+}
+.contain-center-left{
+    width: 729px;
+    display: inline-block;
+    padding: 16px;
+}
+.contain-center-right{
+    width: 250px;
+    display: inline-block;
+}

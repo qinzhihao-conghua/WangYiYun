@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-middle-top',
@@ -39,6 +39,16 @@ export class MiddleTopComponent implements OnInit {
   }
   locationImage(i){
     console.log(i);
+  }
+  @ViewChild("dots")
+  dots:ElementRef
+  scroll(side){
+    if(side=="left"){
+      console.log(this.dots)
+    }
+    else if(side=="right"){
+
+    }
   }
 
 }

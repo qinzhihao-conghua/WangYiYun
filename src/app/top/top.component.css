@@ -114,3 +114,10 @@
     border: 2px solid red;
     background-color: red;
 }
+.top-child-list{
+    width: 744px;
+    margin: 0 auto;
+}
+.top-child-list>li{
+    display: inline-block;
+}
