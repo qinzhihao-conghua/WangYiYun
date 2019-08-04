@@ -4,6 +4,8 @@
       <a href="javascript:void(0)">
         <img [src]=imageSrc alt="">
       </a>
+      <a href="javascript:void(0)" class="scroll-left" (click)="scroll('left')" ></a> 
+      <a href="javascript:void(0)" class="scroll-right" (click)="scroll('right')" ></a>
       <div class="dots" >
         <a href="javascript:void(0)" *ngFor="let item of images, let i=index" (click)="locationImage(i)"
         [attr.data-index]="i" #dots></a>
@@ -13,6 +15,6 @@
       <a href="javascript:void(0)"></a>
     </div>
   </div>
-  <a href="javascript:void(0)" class="scroll-left" (click)="scroll('left')" ></a> 
-  <a href="javascript:void(0)" class="scroll-right" (click)="scroll('right')" ></a>
+  <!-- <a href="javascript:void(0)" class="scroll-left" (click)="scroll('left')" ></a> 
+  <a href="javascript:void(0)" class="scroll-right" (click)="scroll('right')" ></a> -->
 </div>

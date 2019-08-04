@@ -110,7 +110,7 @@
     background-position: 19px -45px;
 }
 .top-child{
-    width: 100%;
+    width: calc(100% - 4px);
     border: 2px solid red;
     background-color: red;
 }
