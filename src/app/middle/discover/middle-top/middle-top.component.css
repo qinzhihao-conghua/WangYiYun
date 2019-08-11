@@ -60,6 +60,9 @@
 .dots>a:hover{
   background-position: -15px -343px;
 }
+.dots .auto-scroll{
+  background-position: -15px -343px;
+}
 
 .middle-right {
   width: 254px;

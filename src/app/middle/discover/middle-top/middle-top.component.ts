@@ -9,8 +9,35 @@ export class MiddleTopComponent implements OnInit {
 
   constructor() { }
 
+  @ViewChild("imagesContent")
+  imagesContent:ElementRef;
+  @ViewChild("dots")
+  dots: ElementRef;
   ngOnInit() {
     this.setScroll();
+    const that=this;
+    this.imagesContent.nativeElement.onmouseenter=function(){
+      // 鼠标进入这个区域，进入子元素不会触发
+      console.log('onmouseenter');
+      clearInterval(that.timeId);
+    };
+    this.imagesContent.nativeElement.onmouseleave=function(){
+      // 鼠标离开这个区域，进入子元素不会触发
+      console.log('onmouseleave');
+      that.setScroll();
+    };
+    this.imagesContent.nativeElement.onmousemove=function(){
+      // 鼠标进入这个区域以及在这个区域移动，包括子元素
+      // console.log('onmousemove');
+    };
+    this.imagesContent.nativeElement.onmouseout=function(){
+      // 鼠标离开这个区域，进入子元素也会触发
+      // console.log('onmouseout');
+    };
+    this.imagesContent.nativeElement.onmouseover=function(){
+      // 鼠标离开这个区域，进入子元素也会触发
+      // console.log('onmouseover');
+    };
   }
 
   images: any[] = [
@@ -26,28 +53,48 @@ export class MiddleTopComponent implements OnInit {
   ]
   imageSrc: string = "../../../../assets/images/1.jpg";
   imageBgc: string = "";
+  imageIndex: number = 0;
+  timeId: any;
   setScroll() {
-    let i = 1;
-    setInterval(() => {
-      if (i == this.images.length) {
-        i = 0;
+    this.timeId = setInterval(() => {
+      this.imageIndex++;
+      if (this.imageIndex == this.images.length) {
+        this.imageIndex = 0;
       }
-      this.imageSrc = this.images[i].scroll;
-      this.imageBgc = "url(" + this.images[i].bgc + ")";
-      i++;
+      this.imageSrc = this.images[this.imageIndex].scroll;
+      this.imageBgc = "url(" + this.images[this.imageIndex].bgc + ")";
     }, 4000);
   }
-  locationImage(i){
-    console.log(i);
-  }
-  @ViewChild("dots")
-  dots:ElementRef
-  scroll(side){
-    if(side=="left"){
-      console.log(this.dots)
+  dotsScroll(i) {
+    if (i  == this.imageIndex) {
+      return 'auto-scroll';
     }
-    else if(side=="right"){
-
+  }
+  locationImage(i) {
+    // console.log(i);
+    this.imageSrc = this.images[i].scroll;
+    this.imageBgc = "url(" + this.images[i].bgc + ")";
+    this.imageIndex = i as number;
+  }
+ 
+  scroll(side: string) {
+    if (side == "left") {
+      // console.log('left', this.imageIndex);
+      this.imageIndex--;
+      if (this.imageIndex < 0) {
+        this.imageIndex = this.images.length-1;
+      }
+      this.imageBgc = "url(" + this.images[this.imageIndex].bgc + ")";
+      this.imageSrc = this.images[this.imageIndex].scroll;
+    }
+    else if (side == "right") {
+      // console.log('right', this.imageIndex);
+      this.imageIndex++;
+      if (this.imageIndex == this.images.length) {
+        this.imageIndex = 0;
+      }
+      this.imageBgc = "url(" + this.images[this.imageIndex].bgc + ")";
+      this.imageSrc = this.images[this.imageIndex].scroll;
     }
   }
 

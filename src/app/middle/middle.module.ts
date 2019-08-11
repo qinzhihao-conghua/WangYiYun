@@ -17,12 +17,7 @@ import { DownloadComponent } from './download/download.component';
     MiddleComponent,
     MiddleTopComponent,
     MiddleContainComponent,
-    DiscoverComponent,
-    // MyMusicComponent,
-    // FriendComponent,
-    // ShopComponent,
-    // CreatorComponent,
-    // DownloadComponent
+    DiscoverComponent
   ],
   // 对于一个模块中的组件，如果其他的模块想要使用，那么必须要将这个组件暴露出去
   exports: [
