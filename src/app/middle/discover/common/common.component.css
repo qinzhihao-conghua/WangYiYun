@@ -1,26 +1,4 @@
-.middle-contain{
-    width: 100%;
-    background-color: #f2f2f2;
-}
-.contain-center{
-    width: 982px;
-    margin: 0 auto;
-}
-.contain-center-left,.contain-center-right{
-    border: 1px solid #d3d3d3;
-    display: inline-block;
-    background-color: #fff;
-    box-sizing: border-box;
-}
-.contain-center-left{
-    width: 729px;
-    padding: 16px;
-    padding: 20px 20px 40px;
-}
-.contain-center-right{
-    width: 250px;
-}
-/* .rmtj{
+.rmtj{
     width: 100%;
 }
 .rmtj-dhl>a{
@@ -47,7 +25,8 @@
 .annulus{
     display: inline-block;
     margin: 0 12px;
-    
+    /* width: 12px; */
+    /* height: 12px; */
     padding: 3px;
     border: 5px solid #C20C0C;
     border-radius: 50%;
@@ -60,8 +39,9 @@
     margin-top: 8px;
 }
 .item{
+    /* display: inline-block; */
     width: 140px;
     height: 204px;
     border: 1px solid #d3d3d3;
     margin-bottom: 30px;
-} */
+}

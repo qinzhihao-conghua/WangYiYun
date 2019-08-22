@@ -2,9 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { DiscoverRoutingModule } from './discover-routing.module';
+import { CommonComponent } from './common/common.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    // CommonComponent
+  ],
   imports: [
     CommonModule,
     DiscoverRoutingModule

@@ -11,13 +11,15 @@ import { FriendComponent } from './friend/friend.component';
 import { ShopComponent } from './shop/shop.component';
 import { CreatorComponent } from './creator/creator.component';
 import { DownloadComponent } from './download/download.component';
+import { CommonComponent } from './discover/common/common.component';
 
 @NgModule({
   declarations: [
     MiddleComponent,
     MiddleTopComponent,
     MiddleContainComponent,
-    DiscoverComponent
+    DiscoverComponent,
+    CommonComponent
   ],
   // 对于一个模块中的组件，如果其他的模块想要使用，那么必须要将这个组件暴露出去
   exports: [
