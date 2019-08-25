@@ -1,67 +1,104 @@
-.middle-contain{
-    width: 100%;
-    background-color: #f2f2f2;
+.middle-contain {
+  width: 100%;
+  background-color: #f2f2f2;
 }
-.contain-center{
-    width: 982px;
-    margin: 0 auto;
+
+.contain-center {
+  width: 982px;
+  margin: 0 auto;
 }
-.contain-center-left,.contain-center-right{
-    border: 1px solid #d3d3d3;
-    display: inline-block;
-    background-color: #fff;
-    box-sizing: border-box;
+
+.contain-center-left,
+.contain-center-right {
+  border: 1px solid #d3d3d3;
+  display: inline-block;
+  background-color: #fff;
+  box-sizing: border-box;
 }
-.contain-center-left{
-    width: 729px;
-    padding: 16px;
-    padding: 20px 20px 40px;
+
+.contain-center-left {
+  width: 729px;
+  padding: 16px;
+  padding: 20px 20px 40px;
 }
-.contain-center-right{
-    width: 250px;
+
+.contain-center-right {
+  width: 250px;
 }
-/* .rmtj{
-    width: 100%;
+
+.xdsj {
+  width: 100%;
 }
-.rmtj-dhl>a{
-    color: #000;
-    cursor: pointer;
-    font-size: 12px;
+
+.xdsj-dhl {
+  height: 33px;
+  border-bottom: 2px solid #C20C0C;
 }
-.rmtj-dhl>a:nth-of-type(1){
-    font-size: 20px;
+
+.xdsj-dhl>a {
+  color: #000;
+  cursor: pointer;
+  font-size: 20px;
 }
-.line{
-    margin: 0 10px;
-    color: #ccc;
+
+.annulus {
+  display: inline-block;
+  margin: 0 12px;
+  padding: 3px;
+  border: 5px solid #C20C0C;
+  border-radius: 50%;
+  background-color: #C20C0C;
+  background-clip: content-box;
 }
-.rmtj-dhl{
-    height: 33px;
-    border-bottom: 2px solid #C20C0C;
+
+.more {
+  float: right;
+  font-size: 12px;
+  margin-top: 8px;
 }
-.rmtj-zht{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+
+.xdsj-zht {
+  position: relative;
+  width: 100%;
+  height: 186px;
+  margin: 20px 0 37px;
+  border: 1px solid #d3d3d3;
+  background-color: #f5f5f5;
 }
-.annulus{
-    display: inline-block;
-    margin: 0 12px;
-    
-    padding: 3px;
-    border: 5px solid #C20C0C;
-    border-radius: 50%;
-    background-color: #C20C0C;
-    background-clip: content-box;
+
+.xdsj-content {
+  overflow: hidden;
+  height: 100%;
+  margin-top: 28px;
+  position: relative;
 }
-.more{
-    float: right;
-    font-size: 12px;
-    margin-top: 8px;
+.one{
+    left: 0px;
 }
-.item{
-    width: 140px;
-    height: 204px;
-    border: 1px solid #d3d3d3;
-    margin-bottom: 30px;
-} */
+.two{
+    left: 676px;
+}
+.three{
+    left: 676px;
+}
+
+.scroll-item {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  padding-left: 16px;
+  box-sizing: border-box;
+}
+
+.scroll-item>li {
+  float: left;
+  width: 118px;
+  height: 150px;
+  margin-left: 11px;
+}
+
+.content-img {
+  width: 100%;
+  background-image: url(../../../../assets/images/coverall.png);
+  background-position: 1px -568px;
+}

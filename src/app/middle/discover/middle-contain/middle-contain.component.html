@@ -3,6 +3,42 @@
     <div class="contain-center-left">
       <div class="center-left-top">
         <app-common></app-common>
+        <!-- 新碟上架 -->
+        <div class="xdsj">
+          <div class="xdsj-dhl">
+            <div class="annulus"></div>
+            <a href="javascript:void(0)">新碟上架</a>
+            <span class="more">
+              <a href="javascript:void(0)">更多>></a>
+            </span>
+          </div>
+          <div class="xdsj-zht">
+            <div class="xdsj-content">
+              <ul *ngFor="let item of XDSJDATA let i=index" class="scroll-item" [ngClass]="scroll(i)">
+                <li *ngFor="let content of item">
+                  <div class="content-img">
+                    <a href="javascript:void(0)">
+                      <img src="{{content.imgSrc}}" width="100" alt="">
+                    </a>
+                  </div>
+                  <p>{{content.desc}}</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- 榜单 -->
+        <div class="xdsj">
+          <div class="xdsj-dhl">
+            <div class="annulus"></div>
+            <a href="javascript:void(0)">榜单</a>
+            <span class="more">
+              <a href="javascript:void(0)">更多>></a>
+            </span>
+          </div>
+          <div class="xdsj.zht"></div>
+        </div>
+
       </div>
     </div>
     <div class="contain-center-right">
