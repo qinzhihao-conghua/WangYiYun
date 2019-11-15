@@ -2,7 +2,26 @@
   <div class="contain-center">
     <div class="contain-center-left">
       <div class="center-left-top">
-        <app-common></app-common>
+        <!-- 热门推荐 -->
+        <div class="rmtj">
+
+          <div class="rmtj-dhl">
+            <div class="annulus"></div>
+            <a href="javascript:void(0)">热门推荐</a>
+            <ul class="dhl-item">
+              <li class="item-list" *ngFor="let item of ['华语','流行','摇滚','民谣','电子'];let i=index">
+                <span class="line" [ngStyle]="{'opacity': i==0?'0':'1' }">|</span>
+                <a class="list-a" href="javascript:void(0)">{{item}}</a>
+              </li>
+            </ul>
+            <span class="more">
+              <a href="javascript:void(0)">更多>></a>
+            </span>
+          </div>
+
+          <app-playlist-item></app-playlist-item>
+        </div>
+        <!-- <app-common></app-common> -->
         <!-- 新碟上架 -->
         <div class="xdsj">
           <div class="xdsj-dhl">
@@ -36,13 +55,19 @@
               <a href="javascript:void(0)">更多>></a>
             </span>
           </div>
-          <div class="xdsj.zht"></div>
+          <div class="xdsj-zht"></div>
         </div>
 
       </div>
     </div>
+
     <div class="contain-center-right">
-      啊啊啊
+      <div class="login-btn">
+        <p class="note">登录网易云音乐，可以享受无限收藏的乐趣，并且无限同步到手机</p>
+        <a href="javascript:void(0)">用户登录</a>
+      </div>
+      <div class="rzgs">入驻歌手</div>
+      <div class="rmzb">热门主播</div>
     </div>
   </div>
 </div>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../service/http.service';
-import { Route, Router, ActivatedRoute, NavigationEnd } from '@angular/router';
+import { Route, Router, ActivatedRoute, NavigationEnd, Scroll } from '@angular/router';
 import { PlatformLocation } from '@angular/common';
 
 @Component({
@@ -24,6 +24,9 @@ export class TopComponent implements OnInit {
       if (data instanceof NavigationEnd) {
         console.log(data.url);
         this.routerPath=data.url;
+      }
+      if(data instanceof Scroll){
+        console.log("滚动：",data);
       }
     })
     this.httpservice.getTopList().subscribe(data => {

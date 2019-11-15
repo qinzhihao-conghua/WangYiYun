@@ -7,32 +7,19 @@ import { TopComponent } from './top/top.component';
 import { BottomComponent } from './bottom/bottom.component';
 import { HttpClientModule} from '@angular/common/http';
 import { MiddleModule } from './middle/middle.module';
-import { DiscoverModule } from './middle/discover/discover.module';
-import { CreatorModule } from './middle/creator/creator.module';
-import { DownloadModule } from './middle/download/download.module';
-import { FriendModule } from './middle/friend/friend.module';
-import { MyMusicModule } from './middle/my-music/my-music.module';
-import { ShopModule } from './middle/shop/shop.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopComponent,
-    BottomComponent,
+    BottomComponent
   ],
   // 引入其他模块
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    
-    MiddleModule,
-    DiscoverModule,
-    CreatorModule,
-    DownloadModule,
-    FriendModule,
-    MyMusicModule,
-    ShopModule
+    MiddleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
