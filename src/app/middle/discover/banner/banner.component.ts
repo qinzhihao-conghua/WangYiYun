@@ -1,11 +1,11 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
-  selector: 'app-middle-top',
-  templateUrl: './middle-top.component.html',
-  styleUrls: ['./middle-top.component.css']
+  selector: 'app-banner',
+  templateUrl: './banner.component.html',
+  styleUrls: ['./banner.component.css']
 })
-export class MiddleTopComponent implements OnInit {
+export class BannerComponent implements OnInit {
 
   constructor() { }
 
@@ -18,12 +18,12 @@ export class MiddleTopComponent implements OnInit {
     const that=this;
     this.imagesContent.nativeElement.onmouseenter=function(){
       // 鼠标进入这个区域，进入子元素不会触发
-      console.log('onmouseenter');
+      // console.log('onmouseenter');
       clearInterval(that.timeId);
     };
     this.imagesContent.nativeElement.onmouseleave=function(){
       // 鼠标离开这个区域，进入子元素不会触发
-      console.log('onmouseleave');
+      // console.log('onmouseleave');
       that.setScroll();
     };
     this.imagesContent.nativeElement.onmousemove=function(){

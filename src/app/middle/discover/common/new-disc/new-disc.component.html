@@ -1,0 +1,18 @@
+<div class="xdsj-zht">
+  <div class="arrow-container">
+    <a class="left" (click)="scroll($event)"></a>
+    <a class="right" (click)="scroll($event)"></a>
+    <div class="xdsj-content">
+      <ul class="scroll-item" *ngFor="let item of newDisc;let i=index;" [style.left]="i*656+'px'">
+        <li *ngFor="let list of item">
+          <div class="content-img">
+            <a href="javascript:void(0)">
+              <img [src]="list.blurPicUrl" width="100px" alt="">
+            </a>
+          </div>
+          <p>{{list.name}}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

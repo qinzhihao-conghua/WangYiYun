@@ -1,17 +1,17 @@
 <div class="playlist">
-  <div class="item" *ngFor="let item of [1,2,3,4,5,6,7,8]">
+  <div class="item" *ngFor="let item of songList.result">
     <div class="item-detail">
-      <a href="javascript:void(0)">
-        <img src="../../../../../assets/images/狗子.jpg" alt="">
+      <a href="javascript:void(0)" id="item.id">
+        <img [src]="item.picUrl" alt="" width="100%">
       </a>
       <div class="item-icon">
         <span></span>
-        <span>3344</span>
+        <span>{{item.playCount | countsFormate}}</span>
         <a href="javascript:void(0)"></a>
       </div>
     </div>
     <div class="item-desc">
-      <a href="javascript:void(0)">喜欢就大声说出来啊，又不用交税</a>
+      <a href="javascript:void(0)">{{item.name}}</a>
     </div>
   </div>
 </div>

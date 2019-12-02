@@ -1,0 +1,34 @@
+.rmtj-dhl {
+  height: 33px;
+  border-bottom: 2px solid #C20C0C;
+}
+
+.annulus {
+  display: inline-block;
+  margin: 0 12px;
+  padding: 3px;
+  border: 5px solid #C20C0C;
+  border-radius: 50%;
+  background-color: #C20C0C;
+  background-clip: content-box;
+}
+
+.dhl-item,
+.item-list {
+  display: inline-block;
+}
+
+.list-a {
+  font-size: 12px;
+}
+
+.line {
+  margin: 0 10px;
+  color: #ccc;
+}
+
+.more {
+  float: right;
+  font-size: 12px;
+  margin-top: 8px;
+}

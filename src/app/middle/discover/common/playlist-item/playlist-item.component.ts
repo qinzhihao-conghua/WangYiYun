@@ -1,4 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { HttpService } from 'src/app/service/http.service';
+import { pipe } from 'rxjs';
+import { map } from 'rxjs/operators'
 
 @Component({
   selector: 'app-playlist-item',
@@ -7,7 +10,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PlaylistItemComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private http: HttpService
+  ) { }
 
   @Input()
   bgcImgUrl:string;
@@ -16,7 +21,13 @@ export class PlaylistItemComponent implements OnInit {
   @Input()
   height:number;
 
+  songList = [];
   ngOnInit() {
+    this.http.getSongList(8).subscribe(songList => {
+      pipe(map(songList => songList));
+      this.songList =songList;
+      console.log(songList);
+    })
   }
 
 }

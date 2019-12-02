@@ -12,7 +12,7 @@ import { MiddleModule } from './middle/middle.module';
   declarations: [
     AppComponent,
     TopComponent,
-    BottomComponent
+    BottomComponent,
   ],
   // 引入其他模块
   imports: [
