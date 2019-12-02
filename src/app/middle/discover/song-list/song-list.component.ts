@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpService } from 'src/app/service/http.service';
 import { filter } from 'rxjs/operators';
+import { HttpService } from 'src/app/service/http.service';
 
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-song-list',
