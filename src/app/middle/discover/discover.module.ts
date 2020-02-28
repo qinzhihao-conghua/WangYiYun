@@ -9,6 +9,7 @@ import { PlaylistItemComponent } from './common/playlist-item/playlist-item.comp
 import { PipesModule } from 'src/app/pipes/pipes.module';
 import { NavgationBarComponent } from './common/navgation-bar/navgation-bar.component';
 import { NewDiscComponent } from './common/new-disc/new-disc.component';
+import { CommonListItemComponent } from './common/common-list-item/common-list-item.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NewDiscComponent } from './common/new-disc/new-disc.component';
     SongListComponent,
     PlaylistItemComponent,
     NavgationBarComponent,
-    NewDiscComponent
+    NewDiscComponent,
+    CommonListItemComponent
   ],
   imports: [
     CommonModule,

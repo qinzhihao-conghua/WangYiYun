@@ -1,0 +1,15 @@
+<ul>
+  <li *ngFor="let item of resultData;let i=index" class="item">
+    <a href="" class="item-container">
+      <div class="item-left">
+        <img class="left-img" [src]="item.img" alt="" height="100%">
+      </div>
+      <div class="item-right">
+        <h3>
+          <span class="item-name">{{item.name}}</span>
+        </h3>
+        <span class="item-desc">{{item.desc}}</span>
+      </div>
+    </a>
+  </li>
+</ul>

@@ -3,24 +3,24 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-top: 16px;
 }
-/* .playlist::after{
-    content: '';
-    width: 140px;
-    flex: auto;
-} */
 
 .item {
   width: 140px;
   height: 204px;
   margin-bottom: 30px;
 }
+
 /* 如果最后一行是3个元素 */
+
 .item:last-child:nth-child(4n - 1) {
   /* margin-right: calc(140px + 94px / 3); */
   margin-right: 183px;
 }
+
 /* 如果最后一行是2个元素 */
+
 .item:last-child:nth-child(4n - 2) {
   /* margin-right: calc(280px + 110px / 3); */
   margin-right: 366px;

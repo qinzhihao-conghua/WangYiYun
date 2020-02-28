@@ -15,13 +15,18 @@ export class SongListComponent implements OnInit {
   ) { }
 
   newDiscList = [];
-  navBarTagList = ['华语', '流行', '摇滚', '民谣', '电子'];
+  navBarTagList = ['华语', '流行', '摇滚', '民谣', '电子'];//未完成筛选
+  enterSingers = [];
   ngOnInit() {
     this.http.getDiscList(0, 10).subscribe(discList => {
       this.newDiscList = this.sliceDiscList(discList.albums, 5);
     });
     this.http.getSongsCategory().subscribe(songsCategory => {
       console.log("歌单", songsCategory.sub);
+    });
+    this.http.getEnterSingers(5001, 5).subscribe(enterSingers => {
+      console.log("入驻歌手", enterSingers);
+      this.enterSingers = enterSingers;
     })
   }
   /**

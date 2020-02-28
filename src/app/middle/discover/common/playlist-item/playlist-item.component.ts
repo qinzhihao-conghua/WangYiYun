@@ -1,7 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { HttpService } from 'src/app/service/http.service';
 import { pipe } from 'rxjs';
-import { map } from 'rxjs/operators'
+import { map } from 'rxjs/operators';
+import { HttpService } from 'src/app/service/http.service';
+
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-playlist-item',
@@ -15,18 +16,18 @@ export class PlaylistItemComponent implements OnInit {
   ) { }
 
   @Input()
-  bgcImgUrl:string;
+  bgcImgUrl: string;
   @Input()
-  width:number;
+  width: number;
   @Input()
-  height:number;
+  height: number;
 
   songList = [];
   ngOnInit() {
     this.http.getSongList(8).subscribe(songList => {
       pipe(map(songList => songList));
-      this.songList =songList;
-      console.log(songList);
+      this.songList = songList;
+      console.log("热门推荐", songList);
     })
   }
 

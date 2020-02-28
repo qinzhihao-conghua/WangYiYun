@@ -1,0 +1,45 @@
+.item {
+  height: 62px;
+  margin-top: 14px;
+  background: #fafafa;
+}
+
+.item-container {
+  display: block;
+  height: 100%;
+}
+
+.item-left {
+  height: 100%;
+  width: 62px;
+  display: inline-block;
+}
+
+.item-right {
+  height: 100%;
+  width: calc(100% - 62px);
+  display: inline-block;
+  border: 1px solid #e9e9e9;
+  border-left: none;
+  vertical-align: top;
+  padding-left: 14px;
+}
+
+.left-img {
+  width: 62px;
+  height: 62px;
+}
+
+.item-name,
+.item-desc {
+  margin-top: 8px;
+  display: block;
+}
+
+.item-name {
+  font-size: 14px;
+}
+
+.item-desc {
+  font-size: 12px;
+}

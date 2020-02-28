@@ -1,6 +1,7 @@
-import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -27,7 +28,24 @@ export class HttpService {
     let receiveLimit = limit || 50;
     return this.httpService.get(`${this.baseUrl}top/album?offset=${receiveOffset}&limit=${receiveLimit}`);
   }
-  getSongsCategory():Observable<any>{
+  /** 
+   * 获取歌曲分类
+   */
+  getSongsCategory(): Observable<any> {
     return this.httpService.get(`${this.baseUrl}playlist/catlist`);
+  }
+  /**
+   * 获取入驻歌手
+   * 
+   * @param {number} cat 歌手类型
+   * @param {number} [limit] 返回数量，默认30
+   * @param {number} [offset] 偏移量，用于分页，默认0
+   * @returns {Observable<any>} 
+   * @memberof HttpService
+   */
+  getEnterSingers(cat: number, limit?: number, offset?: number): Observable<any> {
+    let receiveLimit = limit || 30;
+    let receiveOffset = offset || 0;
+    return this.httpService.get(`${this.baseUrl}artist/list?cat=${cat}&limit=${receiveLimit}&offset=${receiveOffset}`);
   }
 }
